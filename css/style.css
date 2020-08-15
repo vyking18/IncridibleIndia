@@ -7,8 +7,9 @@
 *::-webkit-scrollbar{
     display: none;
 }
+
 .continer{
-    width: 100%;
+    min-width: 100%;
     height: 100vh;
     background: url('../img/DELHI.jpg');
     background-position: top;
@@ -21,15 +22,6 @@
     opacity: .8;
     height: 80px;
 }
-/* .top{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    height: 80px;
-    background-color: #00C9A7;
-} */
-/* .top nav{
-    text-align: center;
-} */
 .top .logo{
     color: rgb(209, 45, 78);
     margin-top: 2%;
@@ -107,6 +99,13 @@ a:hover{
     
 }
 @media screen and (max-width:450px){
+    html,body{
+        width: 100%;
+        height: 100%;
+        margin: 0px;
+        padding: 0px;
+        overflow-x: hidden;
+    }
     .top nav{
         display: none;
     }
@@ -145,6 +144,9 @@ a:hover{
     }
     .center .dis{
         width: max-content;
+    }
+    .center .links{
+        margin-top: -25%;
     }
     .center h1{
         font-size: 23px;
