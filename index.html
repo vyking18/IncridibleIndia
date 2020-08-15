@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Home</title>
+</head>
+<body>
+    <div class="continer">
+        <div class="top">
+            <h1 class="logo">INCRIDIBLE INDIA!</h1>
+            <nav>
+                <ul>
+                    <li class="active">HOME</li>
+                    <li><a href="#">GALLERY</a></li>
+                    <li><a href="#">ABOUT</a></li>
+                    <li><a href="#">CONTACT</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="center">
+            <div class="dis">
+                <h4>Welcome To India</h4>
+                <h1>DO COME & VISIT <span>DELHI</span></h1>
+                <p> <span>"</span> India once is not enough <span>"</span></p>
+            </div>
+            <div class="links">
+                <a href="#">LEARN MORE</a>
+                <a href="#" class="active">SIGNUP HERE</a>
+            </div>
+            
+        </div>
+    </div>
+    <script>
+        function ran(min, max) {
+            return Math.floor(Math.random() * (max - min + 1) ) + min;
+        }
+        var body=document.querySelector('body')
+        body.addEventListener('click',()=>{
+            var city=["DELHI","HYDERABAD","GOA","KERALA","BENGALURU","CHENNAI"]
+            var sp=document.querySelector('span')
+            let randomName=city[ran(0,5)]
+            sp.innerHTML=randomName
+            var continer=document.querySelector(".continer")
+            continer.style.background="url('img/"+randomName+".jpg')"
+            continer.style.backgroundPosition='bottom'
+            continer.style.backgroundSize='cover'
+            if(randomName=='DELHI'){
+            continer.style.backgroundPosition='top'
+            }
+        })
+    </script>
+</body>
+</html>
